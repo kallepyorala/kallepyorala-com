@@ -7,7 +7,7 @@ heroImage: "/kalle.png"
 ---
 
 # Job experiences
-## Lead frontend developer
+## Lead Frontend Developer
 March 2022 - current
 - Company: Scaleup Finance, Denmark
 - Role: Building frontend for next generation fintech platform
