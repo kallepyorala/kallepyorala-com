@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Building public"
 description: "kallepyorala.com is publicly open project"
-pubDate: "Jul 08 2022"
+pubDate: "Dec 04 2022"
 heroImage: "/placeholder-hero.jpg"
 ---
 
