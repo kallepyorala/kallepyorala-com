@@ -48,9 +48,9 @@ January 1999 - December 2001
 - Role: Internet specialist in 4 development teams
 - Technologies: PHP, HTML, JS, CSS, Sybase SQL Anywhere, Oracle
 # Language skills
-Finnish: Native
-English: C2
-French: B2
+- Finnish: Native
+- English: C2
+- French: B2
 # Education
 ## Bachelor of Science studies, 1996 - 1999
 - Institution: Stadia, Finland
