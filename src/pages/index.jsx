@@ -90,7 +90,7 @@ function Resume() {
 
   let resume = [
     {
-      company: 'Scaleup Finance' + (isDark ? ' (Remote)' : ''),
+      company: 'Scaleup Finance',
       title: 'Lead Frontend Developer',
       logo: isDark ? logoScaleupDark : logoScaleupLight,
       start: '2022',
