@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { ThemeContext } from '../pages/_app'
 
 function MailIcon(props) {
   return (
@@ -25,8 +26,29 @@ function MailIcon(props) {
 
 export function Newsletter() {
   const [hasMounted, setHasMounted] = useState(false)
+  const { isDark } = useContext(ThemeContext)
 
   useEffect(() => {
+    const substackScript = `
+      window.CustomSubstackWidget = {
+        substackUrl: "kallepyorala.substack.com",
+        placeholder: "example@gmail.com",
+        buttonText: "Subscribe",
+        theme: "custom",
+        colors: {
+          primary: "#14B8A6",
+          input: "${isDark ? '#18181B' : '#fafafa'}",
+          email: "${isDark ? '#FFFFFF' : '#000000'}",
+          text: "#000000",
+        }
+      };
+      `
+
+    const settingsScript = document.createElement('script')
+    settingsScript.type = 'text/javascript'
+    settingsScript.text = substackScript
+    document.body.appendChild(settingsScript)
+
     const script = document.createElement('script')
 
     script.src = 'https://substackapi.com/widget.js'
@@ -37,8 +59,9 @@ export function Newsletter() {
     setHasMounted(true)
     return () => {
       document.body.removeChild(script)
+      //document.body.removeChild(settingsScript)
     }
-  }, [])
+  }, [isDark])
 
   if (!hasMounted) {
     return null

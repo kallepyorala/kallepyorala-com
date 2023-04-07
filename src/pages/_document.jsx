@@ -34,27 +34,12 @@ const modeScript = `
     updateMode()
   }
 `
-const substackScriopt = `
-window.CustomSubstackWidget = {
-  substackUrl: "kallepyorala.substack.com",
-  placeholder: "example@gmail.com",
-  buttonText: "Subscribe",
-  theme: "custom",
-  colors: {
-    primary: "#14B8A6",
-    input: "#18181B",
-    email: "#FFFFFF",
-    text: "#000000",
-  }
-};
-`
 
 export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
-        <script dangerouslySetInnerHTML={{ __html: substackScriopt }} />
         <link
           rel="alternate"
           type="application/rss+xml"
